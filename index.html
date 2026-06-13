@@ -3,23 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Muzearch — юридические документы</title>
+  <meta name="description" content="Юридические документы — Telegram-бот Muzearch. Версия 6.">
+  <title>Юридические документы · Muzearch</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Muzearch</h1>
-    <p class="meta">Юридические документы · версия 6 · 14 июня 2026</p>
-  </header>
-  <main>
-    <ul class="docs">
-      <li><a href="privacy.html">Политика конфиденциальности</a></li>
-      <li><a href="terms.html">Пользовательское соглашение</a></li>
-      <li><a href="cross-border.html">Согласие на трансграничную передачу (OpenRouter / AI)</a></li>
-    </ul>
-  </main>
-  <footer>
-    <p>Документы для Telegram-бота Muzearch.</p>
-  </footer>
+  <div class="page">
+    <header class="site-header">
+      <div class="brand">
+        <a class="brand-link" href="index.html">
+          <span class="brand-mark" aria-hidden="true">♪</span>
+          <span class="brand-name">Muzearch</span>
+        </a>
+        <p class="brand-tagline">Поиск музыкантов в Telegram</p>
+      </div>
+      <p class="doc-meta">Версия 6 · действует с 14 июня 2026</p>
+      <nav class="site-nav" aria-label="Документы">
+      <a href="index.html" class="active">Главная</a>
+      <a href="privacy.html">Конфиденциальность</a>
+      <a href="terms.html">Соглашение</a>
+      <a href="cross-border.html">Передача данных (AI)</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <h1 class="doc-title">Юридические документы</h1>
+      
+      <p class="intro">
+        Здесь опубликованы документы Telegram-бота <strong>Muzearch</strong> —
+        сервиса для знакомства музыкантов и групп. Тексты соответствуют версии&nbsp;6,
+        действующей с 14 июня 2026.
+      </p>
+      <ul class="doc-cards">
+        <li>
+          <a href="privacy.html">
+            <strong>Политика конфиденциальности</strong>
+            <span>Какие данные собираем, зачем и кому передаём (152-ФЗ).</span>
+          </a>
+        </li>
+        <li>
+          <a href="terms.html">
+            <strong>Пользовательское соглашение</strong>
+            <span>Правила использования бота, анкеты, лайков и модерации.</span>
+          </a>
+        </li>
+        <li>
+          <a href="cross-border.html">
+            <strong>Согласие на трансграничную передачу</strong>
+            <span>Отдельное согласие для AI-поиска через OpenRouter (ст.&nbsp;12&nbsp;152-ФЗ).</span>
+          </a>
+        </li>
+      </ul>
+      <div class="contact-box">
+        Вопросы по документам и персональным данным:<br>
+        <a href="https://t.me/piece0l">@piece0l</a>
+        · <a href="mailto:artemkliuev@gmail.com">artemkliuev@gmail.com</a>
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+      <p><strong>Muzearch</strong> — юридические документы для пользователей бота.</p>
+      <p class="contacts">Связь: <a href="https://t.me/piece0l">@piece0l</a>
+        · <a href="mailto:artemkliuev@gmail.com">artemkliuev@gmail.com</a></p>
+      <p class="fine-print">Актуальная версия: 6. При расхождении с текстом в боте ориентируйтесь на версию, принятую при регистрации.</p>
+    </footer>
+  </div>
 </body>
 </html>

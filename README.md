@@ -1,28 +1,34 @@
-# Muzearch — legal (GitHub Pages)
+# Muzearch — юридические документы
 
-Статические юридические документы для Telegram-бота Muzearch.
+Официальные тексты для Telegram-бота [Muzearch](https://temich52.github.io/muzearch-legal/): политика конфиденциальности, пользовательское соглашение и согласие на трансграничную передачу данных для AI-функций.
 
-## Публикация
+**Сайт:** [https://temich52.github.io/muzearch-legal/](https://temich52.github.io/muzearch-legal/)
 
-1. Создайте **публичный** репозиторий `muzearch-legal` на GitHub.
-2. Скопируйте содержимое этой папки в корень репозитория.
-3. **Settings → Pages → Source:** branch `main`, folder `/ (root)`.
-4. После деплоя URL: `https://<username>.github.io/muzearch-legal/`
+## Документы
 
-## Обновление текстов
+| Файл | Описание |
+|------|----------|
+| [privacy.html](privacy.html) | Политика конфиденциальности (152-ФЗ) |
+| [terms.html](terms.html) | Пользовательское соглашение |
+| [cross-border.html](cross-border.html) | Согласие на передачу данных провайдерам AI |
 
-Из корня проекта Muzearch:
+Текущая версия: **6** (с 14 июня 2026).
+
+## Контакты оператора
+
+- Telegram: [@piece0l](https://t.me/piece0l)
+- Email: [artemkliuev@gmail.com](mailto:artemkliuev@gmail.com)
+
+## Обновление
+
+Исходные тексты хранятся в репозитории [muzearch](https://github.com/temich52/muzearch) (`views/legal.py`).
+После правок:
 
 ```bash
 python scripts/export_legal_html.py
+cd muzearch-legal && git add -A && git commit -m "Update legal pages" && git push
 ```
 
-Затем commit + push в репозиторий `muzearch-legal`.
+## GitHub Pages
 
-## URL для бота (.env)
-
-```env
-LEGAL_PRIVACY_URL=https://<username>.github.io/muzearch-legal/privacy.html
-LEGAL_TERMS_URL=https://<username>.github.io/muzearch-legal/terms.html
-LEGAL_CROSS_BORDER_URL=https://<username>.github.io/muzearch-legal/cross-border.html
-```
+Репозиторий публикуется через **Settings → Pages → branch `main`**, folder `/ (root)`.

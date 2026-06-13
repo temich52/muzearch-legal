@@ -1,26 +1,280 @@
 :root {
-  --bg: #0f1117;
-  --text: #e8eaed;
-  --muted: #9aa0a6;
-  --link: #8ab4f8;
-  --border: #2d3139;
+  --bg: #f6f4f0;
+  --paper: #fffcf8;
+  --text: #1c1b1f;
+  --muted: #5f5c66;
+  --line: #ddd6cc;
+  --accent: #4a3a6b;
+  --accent-soft: #ede8f4;
+  --link: #3d2f5c;
+  --link-hover: #2a2040;
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(28, 27, 31, 0.06), 0 8px 24px rgba(28, 27, 31, 0.06);
 }
+
 * { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  line-height: 1.55;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 1.5rem;
+  margin: 0;
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
   background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.site-header {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.5rem 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
   color: var(--text);
 }
-header { border-bottom: 1px solid var(--border); margin-bottom: 1.5rem; padding-bottom: 1rem; }
-h1 { font-size: 1.5rem; margin: 0 0 0.5rem; }
-.meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 1rem; }
-nav a { margin-right: 1rem; color: var(--link); }
-main p { margin: 0 0 1rem; }
-footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
-ul.docs { list-style: none; padding: 0; }
-ul.docs li { margin: 0.75rem 0; }
-ul.docs a { color: var(--link); font-size: 1.1rem; }
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: "PT Sans", system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.brand-name {
+  font-family: "PT Sans", system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brand-tagline {
+  margin: 0.35rem 0 0 2.55rem;
+  font-family: "PT Sans", system-ui, sans-serif;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.doc-meta {
+  margin: 1rem 0 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+  font-family: "PT Sans", system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.65rem;
+}
+
+.site-nav a {
+  font-family: "PT Sans", system-ui, sans-serif;
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: var(--link);
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.site-nav a:hover {
+  background: var(--accent-soft);
+  border-color: #d8cfe8;
+}
+
+.site-nav a.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.content {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem 1.6rem 2rem;
+}
+
+.doc-title {
+  font-family: "PT Sans", system-ui, sans-serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-soft);
+}
+
+.prose p {
+  margin: 0 0 0.85rem;
+}
+
+.legal-section {
+  margin-bottom: 1.6rem;
+}
+
+.legal-section:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section h2 {
+  font-family: "PT Sans", system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+.clause-num {
+  font-family: "PT Sans", system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--muted);
+  font-size: 0.92em;
+}
+
+.lead {
+  font-size: 1.05rem;
+  margin-bottom: 1.1rem;
+}
+
+.legal-list {
+  margin: 0 0 0.85rem 1.1rem;
+  padding: 0;
+}
+
+.legal-list li {
+  margin-bottom: 0.35rem;
+}
+
+.doc-version {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.prose a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
+.intro {
+  font-size: 1.02rem;
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+
+.doc-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.doc-cards li { margin: 0; }
+
+.doc-cards a {
+  display: block;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.doc-cards a:hover {
+  border-color: #c9bdd8;
+  box-shadow: 0 4px 16px rgba(74, 58, 107, 0.08);
+}
+
+.doc-cards strong {
+  display: block;
+  font-family: "PT Sans", system-ui, sans-serif;
+  font-size: 1.02rem;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.doc-cards span {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.contact-box {
+  margin-top: 1.75rem;
+  padding: 1rem 1.1rem;
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  font-family: "PT Sans", system-ui, sans-serif;
+  font-size: 0.95rem;
+}
+
+.contact-box a {
+  color: var(--link);
+}
+
+.site-footer {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  font-family: "PT Sans", system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.site-footer p { margin: 0 0 0.55rem; }
+
+.site-footer a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.site-footer a:hover { text-decoration: underline; }
+
+.fine-print {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .page { padding: 1rem 0.85rem 2rem; }
+  .content { padding: 1.25rem 1rem 1.5rem; }
+  .brand-tagline { margin-left: 0; }
+}
